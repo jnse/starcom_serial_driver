@@ -1,0 +1,27 @@
+diff -r -u a/drivers/usb/serial/ti_usb_3410_5052.c b/drivers/usb/serial/ti_usb_3410_5052.c
+--- a/drivers/usb/serial/ti_usb_3410_5052.c	2019-05-27 17:45:09.290400681 -0500
++++ b/drivers/usb/serial/ti_usb_3410_5052.c	2019-05-27 17:45:25.334400505 -0500
+@@ -37,6 +37,7 @@
+ /* Vendor and product ids */
+ #define TI_VENDOR_ID			0x0451
+ #define IBM_VENDOR_ID			0x04b3
++#define STARTECH_VENDOR_ID              0x14b0
+ #define TI_3410_PRODUCT_ID		0x3410
+ #define IBM_4543_PRODUCT_ID		0x4543
+ #define IBM_454B_PRODUCT_ID		0x454b
+@@ -354,6 +355,7 @@
+ static const struct usb_device_id ti_id_table_3410[] = {
+ 	{ USB_DEVICE(TI_VENDOR_ID, TI_3410_PRODUCT_ID) },
+ 	{ USB_DEVICE(TI_VENDOR_ID, TI_3410_EZ430_ID) },
++	{ USB_DEVICE(STARTECH_VENDOR_ID, TI_3410_PRODUCT_ID) },
+ 	{ USB_DEVICE(MTS_VENDOR_ID, MTS_GSM_NO_FW_PRODUCT_ID) },
+ 	{ USB_DEVICE(MTS_VENDOR_ID, MTS_CDMA_NO_FW_PRODUCT_ID) },
+ 	{ USB_DEVICE(MTS_VENDOR_ID, MTS_CDMA_PRODUCT_ID) },
+@@ -388,6 +390,7 @@
+ static const struct usb_device_id ti_id_table_combined[] = {
+ 	{ USB_DEVICE(TI_VENDOR_ID, TI_3410_PRODUCT_ID) },
+ 	{ USB_DEVICE(TI_VENDOR_ID, TI_3410_EZ430_ID) },
++	{ USB_DEVICE(STARTECH_VENDOR_ID, TI_3410_PRODUCT_ID) },
+ 	{ USB_DEVICE(MTS_VENDOR_ID, MTS_GSM_NO_FW_PRODUCT_ID) },
+ 	{ USB_DEVICE(MTS_VENDOR_ID, MTS_CDMA_NO_FW_PRODUCT_ID) },
+ 	{ USB_DEVICE(MTS_VENDOR_ID, MTS_CDMA_PRODUCT_ID) },
